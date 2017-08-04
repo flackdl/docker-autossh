@@ -1,4 +1,4 @@
-FROM alpine
+FROM easypi/alpine-arm
 MAINTAINER Justin J. Novack <jnovack@gmail.com>
 
 ARG BUILD_DATE
@@ -28,3 +28,4 @@ RUN apk update && \
     echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && \
     apk add --update autossh@testing && \
     rm -rf /var/lib/apt/lists/*
+
